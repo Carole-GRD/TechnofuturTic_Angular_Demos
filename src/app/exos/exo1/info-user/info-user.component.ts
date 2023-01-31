@@ -12,11 +12,11 @@ export class InfoUserComponent {
 
   constructor() {
     this.age = 20;
-    this.hobby = 'volley';
-    this.pseudo = 'c.gerard';
+    this.hobby = 'volley ball';
+    this.pseudo = 'Carole';
   }
 
-  getInfo() {
-    return `${this.age} ${this.hobby} ${this.pseudo}`;
+  getInfos() {
+    return `Je suis ${this.pseudo}, j'ai ${this.age} ans et mon hobby est le ${this.hobby}.`;
   }
 }

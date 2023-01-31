@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Demo1Component } from './demos/demo1/demo1.component';
-import { InputComponent } from './exo/exo1/input/input.component';
-import { InfoUserComponent } from './exo/exo1/info-user/info-user.component';
+import { InputComponent } from './exos/exo1/input/input.component';
+import { InfoUserComponent } from './exos/exo1/info-user/info-user.component';
+import { Exo1Component } from './exos/exo1/exo1.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { InfoUserComponent } from './exo/exo1/info-user/info-user.component';
     AppComponent,
     Demo1Component,
     InputComponent,
-    InfoUserComponent
+    InfoUserComponent,
+    Exo1Component
   ],
   imports: [
     BrowserModule,
