@@ -8,6 +8,7 @@ import { InputComponent } from './exos/exo1/input/input.component';
 import { InfoUserComponent } from './exos/exo1/info-user/info-user.component';
 import { Exo1Component } from './exos/exo1/exo1.component';
 import { Demo2Component } from './demos/demo2/demo2.component';
+import { Demo3Component } from './demos/demo3/demo3.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { Demo2Component } from './demos/demo2/demo2.component';
     InputComponent,
     InfoUserComponent,
     Exo1Component,
-    Demo2Component
+    Demo2Component,
+    Demo3Component
   ],
   imports: [
     BrowserModule,
