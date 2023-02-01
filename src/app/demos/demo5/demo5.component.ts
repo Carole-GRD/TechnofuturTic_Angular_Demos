@@ -12,9 +12,11 @@ export class Demo5Component {
 
   fruitName: string = '';
 
+  choice: number = 1;
+
   addFruit() {
     this.fruits.push(this.fruitName);
   }
 
-  
+
 }

@@ -1,6 +1,8 @@
 
 <h2>Structural Directives</h2>
 
+<p>-------------------------------</p>
+
 <h3>NgIf</h3>
 
 <!-- <p *ngIf="isOpen">Message Secret</p> -->
@@ -11,4 +13,16 @@
 
 <button (click)="isOpen = true">Afficher</button>
 
+<p>-------------------------------</p>
+
+<h3>Swich</h3>
+
+<input type="text" [(ngModel)]="choice">
+
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="1">Pomme</div>
+    <div *ngSwitchCase="2">Poire</div>
+    <div *ngSwitchCase="3">Pêche</div>
+    <div *ngSwitchDefault>Entrez 1, 2, 3</div>
+</div>
 
