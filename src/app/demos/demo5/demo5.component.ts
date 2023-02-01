@@ -16,7 +16,7 @@ export class Demo5Component {
 
   addFruit() {
     this.fruits.push(this.fruitName);
+    this.fruitName = '';
   }
-
 
 }

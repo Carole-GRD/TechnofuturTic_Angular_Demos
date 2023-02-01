@@ -10,12 +10,14 @@
 
 <p *ngIf="isOpen; else elseBlock">Message Secret</p>
 <ng-template #elseBlock>Il y a un message secret caché !</ng-template>
+<!-- <ng-template #elseBlock style="margin-bottom: 20px;">Il y a un message secret caché !</ng-template> -->
 
-<button (click)="isOpen = true">Afficher</button>
+
+<button style="display: block; margin-top: 10px;" (click)="isOpen = true">Afficher</button>
 
 <p>-------------------------------</p>
 
-<h3>Swich</h3>
+<h3>Switch</h3>
 
 <input type="text" [(ngModel)]="choice">
 
@@ -25,4 +27,15 @@
     <div *ngSwitchCase="3">Pêche</div>
     <div *ngSwitchDefault>Entrez 1, 2, 3</div>
 </div>
+
+<p>-------------------------------</p>
+
+<h3>NgFor</h3>
+
+<input type="text" [(ngModel)]="fruitName">
+<button (click)="addFruit()">Add Fruit</button>
+
+<ul>
+    <li *ngFor="let fruit of fruits; index as i; last as latest" [ngClass]="{ 'isRed': latest}">{{ i + 1 }} - {{ fruit }}</li>
+</ul>
 
