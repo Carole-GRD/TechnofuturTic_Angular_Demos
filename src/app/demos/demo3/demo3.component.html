@@ -1,5 +1,7 @@
 <h2>Demo Pipes</h2>
 
+<!-- <p>------------------------------------------------------</p>
+
 <p>UpperCase : {{ message | uppercase }}</p>
 <p>LowerCase : {{ message | lowercase }}</p>
 <p>TitleCase : {{ message | titlecase }}</p>
@@ -8,3 +10,17 @@
 <p>BirthDate : {{ birthDate | date: 'dd/MM/yyyy' }}</p>
 
 <p>Price : {{ price | currency: 'EUR' }}</p>
+
+<p>------------------------------------------------------</p> -->
+
+<h2>Custom Pipes</h2>
+
+<p>{{ 50 | toTemperature }}</p>
+<p>-----------</p>
+<!-- Pipe qui permet un affichage en farenheit -->
+<p>50 C° = {{ 50 | toTemperature : 'f' }}</p>    
+<!-- Pipe qui permet un affichage en celsius -->
+<p>122 F° = {{ 122 | toTemperature : 'c' }}</p>
+<p>-----------</p>
+<p>50 F° = {{ 50 | toTemperature : 'c' }}</p>
+<p>10 C° = {{ 10 | toTemperature : 'f' }}</p>

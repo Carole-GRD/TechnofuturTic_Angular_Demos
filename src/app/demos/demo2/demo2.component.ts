@@ -12,12 +12,12 @@ export class Demo2Component {
 
   randomNumber(): void {
     this.number = Math.ceil(Math.random() * 10);
-    this.toggleDisable();
+    // this.toggleDisable();
   }
 
   resetNumber(): void {
     this.number = 0;
-    this.toggleDisable();
+    // this.toggleDisable();
   }
 
   toggleDisable(): void {

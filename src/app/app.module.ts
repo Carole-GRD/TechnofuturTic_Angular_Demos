@@ -9,6 +9,7 @@ import { InfoUserComponent } from './exos/exo1/info-user/info-user.component';
 import { Exo1Component } from './exos/exo1/exo1.component';
 import { Demo2Component } from './demos/demo2/demo2.component';
 import { Demo3Component } from './demos/demo3/demo3.component';
+import { ToTemperaturePipe } from './demos/pipes/to-temperature.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { Demo3Component } from './demos/demo3/demo3.component';
     InfoUserComponent,
     Exo1Component,
     Demo2Component,
-    Demo3Component
+    Demo3Component,
+    ToTemperaturePipe
   ],
   imports: [
     BrowserModule,
