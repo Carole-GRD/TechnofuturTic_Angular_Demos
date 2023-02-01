@@ -10,8 +10,6 @@ export class ToChronoPipe implements PipeTransform {
     let hour: number = Math.floor( value / 3600 );
     let minute: number = Math.floor( (value - hour * 3600) / 60 );
     let second: number = Math.floor ( value - (hour * 3600 + minute * 60)  );
-
-
     
     // let hourDisplay: string;
     // if (hour < 10) {
@@ -39,11 +37,11 @@ export class ToChronoPipe implements PipeTransform {
 
     // return `${hourDisplay}:${minuteDisplay}:${secondDisplay}`;
 
-    return `${this.check(hour)}:${this.check(minute)}:${this.check(second)}`;
+    return `${this.display(hour)}:${this.display(minute)}:${this.display(second)}`;
 
   }
 
-  check(timeValue: number): number | string {
+  display(timeValue: number): number | string {
     if (timeValue < 10) {
       return `0${timeValue}`;
     }
