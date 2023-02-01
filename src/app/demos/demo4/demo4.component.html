@@ -13,3 +13,12 @@
 <button (click)="toggleBold()">Bold</button>
 <button (click)="toggleItalic()">Italic</button>
 <button (click)="toggleBig()">Big</button>
+
+<p>-----------------------------------</p>
+
+<h3>NgClass</h3>
+
+<!-- On peut chainer plusieurs classes, séparées par une virgule -->
+<p [ngClass]="{ 'classActive': isActive }">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellat.</p>
+
+<button (click)="isActive = !isActive">Toggle Class</button>

@@ -12,6 +12,8 @@ export class Demo4Component {
   isItalic: boolean = false;
   isBig: boolean = false;
 
+  isActive: boolean = false;
+
   setCurrentStyle() {
     this.currentStyle = {
       'font-weight': this.isBold ? 'bold' : 'normal',
