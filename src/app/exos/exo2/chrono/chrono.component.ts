@@ -21,14 +21,17 @@ export class ChronoComponent {
   stop() {
     clearInterval(this.chrono);
 
-    this.chrono = 0;
+    // ATTENTION : setInterval pourrait retourner la valeur 0
+    // utiliser "undefined" !!!
+    // this.chrono = 0;
+    this.chrono = undefined;
     this.toggleDisabled();
   }
 
   reset() {
     clearInterval(this.chrono);
     this.isDisabled = false;
-    this.chrono = 0;
+    this.chrono = undefined;
     this.time = 0;
   }
 
