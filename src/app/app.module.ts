@@ -12,6 +12,7 @@ import { Demo3Component } from './demos/demo3/demo3.component';
 import { ToTemperaturePipe } from './demos/pipes/to-temperature.pipe';
 import { ChronoComponent } from './exos/exo2/chrono/chrono.component';
 import { ToChronoPipe } from './exos/exo2/pipe/to-chrono.pipe';
+import { Demo4Component } from './demos/demo4/demo4.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ToChronoPipe } from './exos/exo2/pipe/to-chrono.pipe';
     Demo3Component,
     ToTemperaturePipe,
     ChronoComponent,
-    ToChronoPipe
+    ToChronoPipe,
+    Demo4Component
   ],
   imports: [
     BrowserModule,
