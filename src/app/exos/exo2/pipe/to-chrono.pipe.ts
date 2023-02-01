@@ -7,47 +7,12 @@ export class ToChronoPipe implements PipeTransform {
 
   transform(value: number): string {
     
-    let hour: number = Math.floor( value / 3600 );
-    let minute: number = Math.floor( (value - hour * 3600) / 60 );
-    let second: number = Math.floor ( value - (hour * 3600 + minute * 60)  );
-    
-    // let hourDisplay: string;
-    // if (hour < 10) {
-    //   hourDisplay = `0${hour}`;
-    // }
-    // else {
-    //   hourDisplay = `${hour}`;
-    // }
+    const hour: number = Math.floor( value / 3600 );
+    const minute: number = Math.floor( value % 3600 / 60 );
+    const second: number = Math.floor ( value % 3600 % 60 );
 
-    // let minuteDisplay: string;
-    // if (minute < 10) {
-    //   minuteDisplay = `0${minute}`;
-    // }
-    // else {
-    //   minuteDisplay = `${minute}`;
-    // }
+    return `${hour < 10 ? `0${hour}` : hour}:${minute < 10 ? `0${minute}` : minute}:${second < 10 ? `0${second}` : second}`;
 
-    // let secondDisplay: string;
-    // if (second < 10) {
-    //   secondDisplay = `0${second}`;
-    // }
-    // else {
-    //   secondDisplay = `${second}`;
-    // }
-
-    // return `${hourDisplay}:${minuteDisplay}:${secondDisplay}`;
-
-    return `${this.display(hour)}:${this.display(minute)}:${this.display(second)}`;
-
-  }
-
-  display(timeValue: number): number | string {
-    if (timeValue < 10) {
-      return `0${timeValue}`;
-    }
-    else {
-      return `${timeValue}`;
-    }
   }
 
 }

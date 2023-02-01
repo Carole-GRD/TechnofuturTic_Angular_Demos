@@ -7,36 +7,25 @@ import { Component } from '@angular/core';
 })
 export class ChronoComponent {
   time: number = 0;
-  isDisabled: boolean = false;
   
-  chrono: any = 0;
+  setChrono: any;
+  // setChrono?: ReturnType<typeof setInterval>;
 
   start() {
-    this.chrono = setInterval(() => {
+    this.setChrono = setInterval(() => {
       return this.time += 1; 
-    },1000);
-    this.toggleDisabled();
+    }, 1000);
   }
 
   stop() {
-    clearInterval(this.chrono);
+    clearInterval(this.setChrono);
+    this.setChrono = undefined;
 
-    // ATTENTION : setInterval pourrait retourner la valeur 0
-    // utiliser "undefined" !!!
-    // this.chrono = 0;
-    this.chrono = undefined;
-    this.toggleDisabled();
   }
 
   reset() {
-    clearInterval(this.chrono);
-    this.isDisabled = false;
-    this.chrono = undefined;
+    this.stop();
     this.time = 0;
-  }
-
-  toggleDisabled() {
-    this.isDisabled = !this.isDisabled;
   }
 
 }

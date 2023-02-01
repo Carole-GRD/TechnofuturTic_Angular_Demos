@@ -1,17 +1,10 @@
 
 <h2>Chrono</h2>
 
-<!-- Affichage avec un Pipe ! -->
-<!-- <p>00:00:00</p>     -->
 <p>{{ time | toChrono }}</p>    
 
-<button type="button" (click)="start()" [disabled]="isDisabled">Start</button>
-<button type="button" (click)="stop()"  [disabled]="!isDisabled">Stop</button>
+<button type="button" (click)="start()" [disabled]="setChrono">Start</button>
+<button type="button" (click)="stop()"  [disabled]="!setChrono">Stop</button>
+<button type="button" (click)="reset()" [disabled]="time === 0">Reset</button>
 
 
-<button type="button" 
-        (click)="reset()" 
-        [disabled]="this.time === 0">Reset</button>
-<!-- {{ this.time }}
-{{ this.chrono }}
-{{ this.isDisabled }} -->
