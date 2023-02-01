@@ -1,0 +1,14 @@
+
+<h2>Structural Directives</h2>
+
+<h3>NgIf</h3>
+
+<!-- <p *ngIf="isOpen">Message Secret</p> -->
+<!-- <p *ngIf="!isOpen">Il y a un message secret caché !</p> -->
+
+<p *ngIf="isOpen; else elseBlock">Message Secret</p>
+<ng-template #elseBlock>Il y a un message secret caché !</ng-template>
+
+<button (click)="isOpen = true">Afficher</button>
+
+
