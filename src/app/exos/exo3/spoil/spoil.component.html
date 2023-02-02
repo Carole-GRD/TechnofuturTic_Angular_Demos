@@ -1,0 +1,11 @@
+
+
+<h2>Spoiler Alert</h2>
+
+<button type="button" (click)="noSpoil = !noSpoil">{{noSpoil ? 'Spoil' : 'Cacher'}}</button>
+
+<p *ngIf="noSpoil; else elseBlock">Rien à voir</p>
+
+<ng-template #elseBlock>
+    <p [ngStyle]="{ 'background-color' : 'red', 'color' : 'yellow' }">Bambi est pas mort à la fin</p>
+</ng-template>

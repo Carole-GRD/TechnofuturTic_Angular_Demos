@@ -15,6 +15,8 @@ import { ToChronoPipe } from './exos/exo2/pipe/to-chrono.pipe';
 import { Demo4Component } from './demos/demo4/demo4.component';
 import { Demo5Component } from './demos/demo5/demo5.component';
 import { FormsModule } from '@angular/forms';
+import { SpoilComponent } from './exos/exo3/spoil/spoil.component';
+
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { FormsModule } from '@angular/forms';
     ChronoComponent,
     ToChronoPipe,
     Demo4Component,
-    Demo5Component
+    Demo5Component,
+    SpoilComponent
   ],
   imports: [
     BrowserModule,
