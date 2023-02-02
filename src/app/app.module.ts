@@ -17,6 +17,7 @@ import { Demo5Component } from './demos/demo5/demo5.component';
 import { FormsModule } from '@angular/forms';
 import { SpoilComponent } from './exos/exo3/spoil/spoil.component';
 import { MenuComponent } from './exos/exo4/menu/menu.component';
+import { CoursComponent } from './exos/exo5/cours/cours.component';
 
 
 
@@ -35,7 +36,8 @@ import { MenuComponent } from './exos/exo4/menu/menu.component';
     Demo4Component,
     Demo5Component,
     SpoilComponent,
-    MenuComponent
+    MenuComponent,
+    CoursComponent
   ],
   imports: [
     BrowserModule,

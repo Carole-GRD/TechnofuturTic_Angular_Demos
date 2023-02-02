@@ -1,0 +1,14 @@
+
+<h2>Mes cours préférés</h2>
+
+
+
+
+<div *ngFor="let cour of cours">
+    <div [ngClass]="'title'" (click)="isOpen(cour)">
+        <div>{{ cour.title }}</div>
+        <div>{{ cour.isActive ? 'X' : 'V' }}</div>
+    </div>
+    <div [ngClass]="'description'" *ngIf="cour.isActive">{{ cour.description  }}</div>
+</div>
+

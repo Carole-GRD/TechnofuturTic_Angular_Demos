@@ -1,0 +1,16 @@
+
+.title,
+.description {
+    padding: 5px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid darkslategray;
+    background-color: #add8e6;
+    cursor: pointer;
+}
+.description {
+    border: 1px solid black;
+}
