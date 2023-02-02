@@ -1,25 +1,19 @@
 
 <h2>Exo Menu</h2>
 
-<!-- Menu hamburger (3 lignes horizontales) -->
-<!-- -------------------------------------- -->
-<!-- Attention : changer la classe ! -->
-<svg *ngIf="!isOpen; else elseBlock" (click)="isOpen = !isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
 
-<!-- Menu hamburger (croix) -->
-<!-- ---------------------- -->
-<ng-template #elseBlock>
-    <svg  (click)="isOpen = !isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+<div class="menu-container">
+
+    <svg (click)="isOpen = !isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+        <!-- Si le menu est fermé => image de menu hamburger -->
+        <path *ngIf="!isOpen" stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        <!-- Si le menu est ouvert => image d'une croix -->
+        <path *ngIf="isOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
-</ng-template>
 
-<!-- Menu (liens) -->
-<!-- ------------ -->
-<ul *ngIf="isOpen">
-    <li *ngFor="let link of links">{{ link }}</li>
-</ul>
+    <!-- Menu (liens) -->
+    <ul *ngIf="isOpen" class="menu">
+        <li *ngFor="let link of links">{{ link }}</li>
+    </ul>
 
-  
+</div>  

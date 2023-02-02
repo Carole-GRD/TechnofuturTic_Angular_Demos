@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class MenuComponent {
   isOpen: boolean = false;
 
-  links: string[] = ['Link1', 'Link2', 'Link3'];
+  links: string[] = ['Link 1', 'Link 2', 'Link 3'];
 }

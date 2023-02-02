@@ -1,17 +1,29 @@
 .icon {
     width: 65px;
     height: 65px;
+    cursor: pointer;
 }
 
-ul {
+.menu-container {
+    position: relative;
+}
+
+
+// donner une classe permet d'être sûr que l'on ne va pas modifier ces "ul" par la suite
+.menu {
+    position: absolute;
+    // left: 20px;
+    background-color: white;
     padding: 5px 10px;
     list-style-type: none;
     border: 1px solid black;
     border-radius: 5px;
-    width: max-content;
-}
+    width: fit-content;
 
-li {
-    padding: 5px 0 ;
-    text-align: center;
+    // on peut imbriquer les classes en SCSS !
+    // c'est plus facile à lire et à maintenir par la suite
+    li {
+        padding: 5px 0 ;
+        text-align: center; 
+    }
 }
