@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./spoil.component.scss']
 })
 export class SpoilComponent {
-  noSpoil: boolean = true;
+  isSpoil: boolean = false;
 }

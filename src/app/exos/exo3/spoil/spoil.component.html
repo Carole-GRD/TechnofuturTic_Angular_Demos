@@ -2,10 +2,12 @@
 
 <h2>Spoiler Alert</h2>
 
-<button type="button" (click)="noSpoil = !noSpoil">{{noSpoil ? 'Spoil' : 'Cacher'}}</button>
+<button type="button" (click)="isSpoil = !isSpoil">{{isSpoil ? 'Cacher' : 'Spoil'}}</button>
 
-<p *ngIf="noSpoil; else elseBlock">Rien à voir</p>
+<!-- <p *ngIf="isSpoil; else elseBlock" [ngStyle]="{ 'background-color' : 'red', 'color' : 'yellow' }">Bambi est pas mort à la fin</p> -->
+<!-- le ngClass n'a pas d'intérêt ici, c'est juste pour s'entrainer -->
+<p *ngIf="isSpoil; else elseBlock" [ngClass]="{ 'secret' : isSpoil }">Bambi est pas mort à la fin</p>
 
 <ng-template #elseBlock>
-    <p [ngStyle]="{ 'background-color' : 'red', 'color' : 'yellow' }">Bambi est pas mort à la fin</p>
+    <p >Rien à voir</p>
 </ng-template>
