@@ -1,21 +1,24 @@
 
-.title,
-.description {
-    padding: 5px;
+.lescours {
+    width: 80vw;
+    margin: 0 auto;
 }
 
-.content {
-    width: 50vw;
-    min-width: 300px;
-}
-
-.title {
+.titre-cours {
+    background-color: lightblue;
+    padding: .5%;
+    border: 1px solid darkslategray;
     display: flex;
     justify-content: space-between;
-    border: 1px solid darkslategray;
-    background-color: #add8e6;
     cursor: pointer;
 }
-.description {
-    border: 1px solid black;
+
+.description-cours {
+    padding: .5%;
+    border-left: 1px solid darkslategray;
+    border-right: 1px solid darkslategray;
+}
+
+.lescours:last-child {
+    border-bottom: 1px solid darkslategray;;
 }

@@ -1,14 +1,19 @@
 
 <h2>Mes cours préférés</h2>
 
+<!-- --------- -->
+<!-- ACCORDEON -->
+<!-- --------- -->
 
-
-
-<div *ngFor="let cour of cours" class="content">
-    <div class="title" (click)="isOpen(cour)">
-        <div>{{ cour.title }}</div>
-        <div>{{ cour.isActive ? 'X' : 'V' }}</div>
+<section class="lescours">
+    <div *ngFor="let cours of courses; index as i" class="content">
+        <div class="titre-cours" (click)="toggleDescription(i)">
+            <span>{{ cours.title }}</span>
+            <span>{{ cours.isActive ? 'X' : 'V' }}</span>
+        </div>
+        <div class="description-cours" *ngIf="cours.isActive">
+            <span>{{ cours.description  }}</span>
+        </div>
     </div>
-    <div class="description" *ngIf="cour.isActive">{{ cour.description  }}</div>
-</div>
+</section>
 
