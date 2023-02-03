@@ -10,10 +10,10 @@ import { CoursComponent } from './exo5/cours/cours.component';
 
 const routes: Routes = [
   { path: 'exo1', component: Exo1Component },
-  { path: 'exo2/chrono', component: ChronoComponent },
-  { path: 'exo3/spoil', component: SpoilComponent },
-  { path: 'exo4/menu', component: MenuComponent },
-  { path: 'exo5/cours', component: CoursComponent },
+  { path: 'exo2', component: ChronoComponent },
+  { path: 'exo3', component: SpoilComponent },
+  { path: 'exo4', component: MenuComponent },
+  { path: 'exo5', component: CoursComponent },
 ];
 
 @NgModule({

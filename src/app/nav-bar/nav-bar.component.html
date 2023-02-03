@@ -1,0 +1,9 @@
+
+<ul>
+    <li *ngFor="let link of linksDemos, index as i">
+        <a routerLink="demo{{i + 1}}">{{ link }}</a>
+    </li>
+    <li *ngFor="let link of linksExos, index as i">
+        <a routerLink="exo{{i + 1}}">{{ link }}</a>
+    </li>
+</ul>

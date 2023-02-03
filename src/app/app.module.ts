@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 
 import { DemosModule } from './demos/demos.module';
 import { ExosModule } from './exos/exos.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
