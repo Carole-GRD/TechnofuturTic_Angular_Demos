@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DemosModule } from './demos/demos.module';
 import { ExosModule } from './exos/exos.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -18,7 +19,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     BrowserModule,
     AppRoutingModule,
     DemosModule,
-    ExosModule
+    ExosModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
