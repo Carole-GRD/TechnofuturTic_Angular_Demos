@@ -11,6 +11,9 @@ import { SpoilComponent } from './exo3/spoil/spoil.component';
 import { MenuComponent } from './exo4/menu/menu.component';
 import { CoursComponent } from './exo5/cours/cours.component';
 import { SharedModule } from '../shared/shared.module';
+import { Exo6Component } from './exo6/exo6.component';
+import { BookComponent } from './exo6/book/book.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,12 +24,15 @@ import { SharedModule } from '../shared/shared.module';
     ChronoComponent,
     SpoilComponent,
     MenuComponent,
-    CoursComponent
+    CoursComponent,
+    Exo6Component,
+    BookComponent
   ],
   imports: [
     CommonModule,
     ExosRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class ExosModule { }

@@ -1,0 +1,15 @@
+
+<div style="border: 2px solid red; margin: 5px; padding: 1%;">
+    <h2>Book List</h2>
+
+    <input type="text" [(ngModel)]="newBook">
+    <button (click)="addBook(newBook)">Add Book</button>
+
+    <app-book
+        *ngFor="let book of books"
+        [idBookChildren]="idBook"
+        [bookChildren]="book"
+        (sayBookToDelete)="receiveBookToDelete($event)"
+     />
+    
+</div>
