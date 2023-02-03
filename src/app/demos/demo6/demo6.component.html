@@ -1,0 +1,17 @@
+
+<div style="border: 1px solid red; margin-top: 5px; padding: 1%;">
+    <h2>Bonjour, je suis le composant parent et je m'appelle {{ prenomParent }}</h2>
+    <p>{{ messageDeFiston }}</p>
+
+
+    <!-- [...] -> @Input :  communication parent - enfant  -->
+    <!-- (...) -> @Output :  communication enfant - parent -->
+    <!-- $event est l'évènement courant ??? -->
+    <app-enfant 
+        *ngFor="let enfant of prenomsEnfant, index as i" 
+        [age]="(i+1)*6"
+        [prenomEnfant]="enfant" 
+        [prenomPapa]="prenomParent" 
+        (direBonjour)="recevoirBonjour($event)" />
+    
+</div>
