@@ -1,15 +1,10 @@
 .book-content {
     border: 2px solid blue; 
     margin: 5px; 
-    padding: 0;
-}
-.book-content ul {  
-    margin: 5px 0;
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 .book-content li {
     display: flex;
-    // flex-direction: row;
     justify-content: space-between; 
     align-items: center;
     list-style-type: none;

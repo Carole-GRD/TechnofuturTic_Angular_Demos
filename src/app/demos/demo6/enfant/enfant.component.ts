@@ -14,10 +14,11 @@ export class EnfantComponent {
 
   @Input() age: number = 0;
 
-  // Méthode reçu du parent (qui permet de modifier le parent)
+  // ------------------------------------------------
   // De l'enfant vers le parent
-  @Output() direBonjour: EventEmitter<string> = new EventEmitter<string>();
 
+  // Méthode reçu du parent (qui permet de modifier le parent)
+  @Output() direBonjour: EventEmitter<string> = new EventEmitter<string>();
 
   emmettreUnBonjour(age: number) {
     // Message envoyé au composant parent
