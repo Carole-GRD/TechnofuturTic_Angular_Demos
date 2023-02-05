@@ -15,7 +15,7 @@ export type Book = {
 })
 export class Exo6Component {
   
-  idBook: number = 3;
+  idBook: number = 4;
   
   newBook: string = '';
 
@@ -27,19 +27,19 @@ export class Exo6Component {
 
   addBook(bookToAdd: string) {
     console.log(this.books);
-    this.idBook += 1;
     this.books.push({ id: this.idBook, title: bookToAdd });
+    this.idBook += 1;
     this.newBook = '';
   }
 
-  idToFind: number = 0;
+  indexToFind: number = 0;
   receiveBookToDelete(event: Book) {
 
-    this.idToFind = this.books.findIndex((book) => {
+    this.indexToFind = this.books.findIndex((book) => {
       return book.title === event.title;
     })
 
-    this.books.splice(this.idToFind, 1);
+    this.books.splice(this.indexToFind, 1);
 
   }  
 }
