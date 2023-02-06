@@ -15,6 +15,8 @@ import { Exo6ServiceComponent } from './exo6-service/exo6-service.component';
 import { BookServiceComponent } from './exo6-service/book-service/book-service.component';
 import { Exo6Component } from './exo6/exo6.component';
 import { BookComponent } from './exo6/book/book.component';
+import { Exo7Component } from './exo7/exo7.component';
+import { ProductComponent } from './exo7/product/product.component';
 // import { FormsModule } from '@angular/forms';
 
 
@@ -30,7 +32,9 @@ import { BookComponent } from './exo6/book/book.component';
     Exo6ServiceComponent,
     BookServiceComponent,
     Exo6Component,
-    BookComponent
+    BookComponent,
+    Exo7Component,
+    ProductComponent
   ],
   imports: [
     CommonModule,

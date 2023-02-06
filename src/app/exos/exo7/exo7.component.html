@@ -1,0 +1,32 @@
+<h2>Shopping List</h2>
+
+<section style="border: 1px solid black; 
+                border-radius: 5px;
+                padding: 10px;">
+    <div>
+        <label for="name">Name : </label>
+        <input id="name" type="text" [(ngModel)]="productName">
+    </div>
+    <div>
+        <label for="price">Price : </label>
+        <input id="price" type="number" [(ngModel)]="productPrice">
+    </div>
+    <div>
+        <label for="promo">Promo : </label>
+        <input id="promo" type="checkbox" [(ngModel)]="productPromo">
+    </div>
+    <div>
+        <button (click)="addProduct()">Add</button>
+    </div>
+</section>
+
+<section>
+    <ul> 
+        <app-product 
+            *ngFor="let product of shopping"
+            [product]="product" />
+    </ul>
+    <p>Total : {{ total | currency: 'EUR' }}</p>
+</section>
+
+

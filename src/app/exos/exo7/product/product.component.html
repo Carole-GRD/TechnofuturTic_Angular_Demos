@@ -1,0 +1,9 @@
+<li>
+    {{ product.name }} 
+    - qt: {{ product.quantity }} 
+    - <span [ngClass]="{ 'isPromo': product.promo }">
+        {{ product.pricePromo | currency: 'EUR' }}
+      </span> 
+      - {{ product.price | currency: 'EUR' }}
+</li>
+
