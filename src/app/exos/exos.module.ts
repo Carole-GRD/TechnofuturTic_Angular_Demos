@@ -13,7 +13,7 @@ import { CoursComponent } from './exo5/cours/cours.component';
 import { SharedModule } from '../shared/shared.module';
 import { Exo6Component } from './exo6/exo6.component';
 import { BookComponent } from './exo6/book/book.component';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,8 +31,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ExosRoutingModule,
-    SharedModule,
-    FormsModule
+    SharedModule
+    // FormsModule
   ]
 })
 export class ExosModule { }

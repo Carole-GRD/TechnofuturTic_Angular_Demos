@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ToChronoPipe } from './pipe/to-chrono.pipe';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,11 +14,13 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule      //  impoter le RouterModule !  
+    RouterModule,      //  impoter le RouterModule !  
+    FormsModule
   ],
   exports: [
     ToChronoPipe,
-    NavbarComponent
+    NavbarComponent,
+    FormsModule
   ]
 })
 export class SharedModule { }

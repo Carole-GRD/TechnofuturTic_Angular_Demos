@@ -5,6 +5,10 @@
     <input type="text" [(ngModel)]="newBook">
     <button (click)="addBook(newBook)">Add Book</button>
 
+    <div *ngIf="books.length === 0">
+        <p>Add books to your list</p>
+    </div>
+
     <app-book
         *ngFor="let book of books"
         [idBookChildren]="idBook"

@@ -34,14 +34,17 @@ export class Exo6Component {
     this.newBook = '';
   }
 
-  indexToFind: number = 0;
+  // indexToFind!: number;
+  // déclaré dans la fonction car pas besoin de l'afficher dans le site (dans l'HTML)
   receiveBookToDelete(event: Book) {
 
-    this.indexToFind = this.books.findIndex((book) => {
-      return book.title === event.title;
+     const indexToFind = this.books.findIndex((book) => {
+      // return book.title === event.title;
+      return book.id === event.id; 
+      // -> l'id est différent de l'index du livre dans le tableau !
     })
 
-    this.books.splice(this.indexToFind, 1);
+    this.books.splice(indexToFind, 1);
 
   }  
 }
