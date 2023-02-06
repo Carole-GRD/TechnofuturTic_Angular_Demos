@@ -15,16 +15,18 @@ export type Book = {
 })
 export class Exo6Component {
   
-  idBook: number = 4;
+  idBook: number = 1;
+  // idBook: number = 4;
   
   newBook: string = '';
 
-  books: Book[] = [
-    { id: 1, title: 'Book 1' },
-    { id: 2, title: 'Book 2' },
-    { id: 3, title: 'Book 3' },
-  ];
-
+  books: Book[] = [];
+  // books: Book[] = [
+  //   { id: 1, title: 'Book 1' },
+  //   { id: 2, title: 'Book 2' },
+  //   { id: 3, title: 'Book 3' },
+  // ];
+  
   addBook(bookToAdd: string) {
     console.log(this.books);
     this.books.push({ id: this.idBook, title: bookToAdd });
