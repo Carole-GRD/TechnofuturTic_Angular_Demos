@@ -5,7 +5,7 @@ import { Book } from '../models/book';
   providedIn: 'root'
 })
 
-export class ListService {
+export class BookService {
 
   books: Book[] = [
     new Book(1, 'Book 1'),
@@ -13,20 +13,21 @@ export class ListService {
     new Book(3, 'Book 3'),
   ];
 
-  idBook: number = 4;
+  idBook: number = 3;
   bookName: string = '';
   newBook!: Book;
   errorMessage: string = '';
 
   constructor() { }
 
-  addNewBook(newId: number, newTitle: string) {
+  addNewBook(newTitle: string) {
     this.errorMessage = '';
     
     if (newTitle.trim()) {
-      const newBook = new Book(newId, newTitle);
-      this.books.push(newBook);
       this.idBook += 1;
+      const newBook = new Book(this.idBook, newTitle);
+      this.books.push(newBook);
+
     }
     else {
       this.errorMessage = 'Book Name Is Required !';

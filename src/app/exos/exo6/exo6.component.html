@@ -6,16 +6,20 @@
         <label for="book-input">Book Name : </label>
         <input id="book-input" type="text" [(ngModel)]="bookName">
         <button (click)="addBook()">Add Book</button>
-        <p *ngIf="listService.errorMessage" style="color: red;">
-            {{ listService.errorMessage }}
+        <p *ngIf="bookService.errorMessage" style="color: red;">
+            {{ bookService.errorMessage }}
         </p>
     </div>
 
 
-    <div *ngIf="listService.books.length === 0">
+    <div *ngIf="bookService.books.length === 0">
         <p style="color: blue;">Add books to your list</p>
     </div>
-
-     <app-book />
+    
+    <ul>
+        <app-book  
+            *ngFor="let book of books" 
+            [book]="book" />
+    </ul>
     
 </div>

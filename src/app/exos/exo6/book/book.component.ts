@@ -1,9 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ListService } from '../../services/list.service';
-
-
-
-
+import { Book } from '../../models/book';
+import { BookService } from '../../services/book.service';
 
 
 @Component({
@@ -17,16 +14,18 @@ export class BookComponent implements OnInit{
   bookName: string = '';
 
   constructor(
-    public listService: ListService
+    public bookService: BookService
   ){}
 
+  @Input() book!: Book;
+
   ngOnInit() {
-    this.bookName = this.listService.bookName;
-    this.idBook = this.listService.idBook;
+    this.bookName = this.bookService.bookName;
+    this.idBook = this.bookService.idBook;
   }
 
   deleteBook(eventId: number) {
-    this.listService.deleteOneBook(eventId);
+    this.bookService.deleteOneBook(eventId);
   }
   
 }

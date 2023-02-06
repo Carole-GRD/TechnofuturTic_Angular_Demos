@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../models/book';
-import { ListService } from '../services/list.service';
+import { BookService } from '../services/book.service';
 
 @Component({
   selector: 'app-exo6',
@@ -10,23 +10,26 @@ import { ListService } from '../services/list.service';
 
 export class Exo6Component implements OnInit {
   
-  idBook!: number;
+
   bookName: string = '';
-  
-  newBook!: Book;
+
+  books: Book[] = [];
 
   constructor(
-    public listService: ListService
+    public bookService: BookService
   ){}
 
   ngOnInit() {
     // this.newBook = this.listService.newBook;
-    this.bookName = this.listService.bookName;
+    this.books = this.bookService.books;
   }
 
   addBook() {
-    this.listService.addNewBook(this.idBook, this.bookName);
-    this.bookName = '';
+    this.bookService.addNewBook(this.bookName);
+    if (this.bookName) {
+
+      this.bookName = '';
+    }
   }
 
 }

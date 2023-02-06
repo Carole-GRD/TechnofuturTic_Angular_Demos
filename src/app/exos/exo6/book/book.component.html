@@ -1,8 +1,8 @@
 
 
-<ul>
-    <li *ngFor="let book of listService.books">
+
+    <li>
         ID : {{book.id}}  || Name : {{book.title}} || 
         <button (click)="deleteBook(book.id)">X</button>
     </li>
-</ul>
+
