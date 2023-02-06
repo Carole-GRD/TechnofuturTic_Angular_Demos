@@ -33,6 +33,7 @@ export class NavbarComponent {
       { title: 'Menu', url: 'exo4' },
       { title: 'Accordeon', url: 'exo5' },
       { title: 'Book List', url: 'exo6' },
+      { title: 'Book List - Service', url: 'exo6-service' },
     ] }
   ];
 

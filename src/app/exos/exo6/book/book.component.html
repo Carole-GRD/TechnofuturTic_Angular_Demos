@@ -1,8 +1,13 @@
-
-
+<ul class="book-content">
 
     <li>
-        ID : {{book.id}}  || Name : {{book.title}} || 
-        <button (click)="deleteBook(book.id)">X</button>
+        <p><span>ID : </span>
+            <span class="blueText">{{ bookChildren.id }} </span>
+            <span class="seperate">||</span> 
+            <span>Name : </span>
+            <span class="blueText">{{ bookChildren.title }}</span>
+        </p>
+        <button (click)="sendBookToDelete(bookChildren)">X</button>
     </li>
 
+</ul>

@@ -6,7 +6,9 @@ import { ChronoComponent } from './exo2/chrono/chrono.component';
 import { SpoilComponent } from './exo3/spoil/spoil.component';
 import { MenuComponent } from './exo4/menu/menu.component';
 import { CoursComponent } from './exo5/cours/cours.component';
+import { Exo6ServiceComponent } from './exo6-service/exo6-service.component';
 import { Exo6Component } from './exo6/exo6.component';
+
 
 
 const routes: Routes = [
@@ -15,7 +17,8 @@ const routes: Routes = [
   { path: 'exo3', component: SpoilComponent },
   { path: 'exo4', component: MenuComponent },
   { path: 'exo5', component: CoursComponent },
-  { path: 'exo6', component: Exo6Component },
+  { path: 'exo6', component: Exo6Component},
+  { path: 'exo6-service', component: Exo6ServiceComponent},
 ];
 
 @NgModule({

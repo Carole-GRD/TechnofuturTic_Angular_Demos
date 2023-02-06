@@ -11,6 +11,8 @@ import { SpoilComponent } from './exo3/spoil/spoil.component';
 import { MenuComponent } from './exo4/menu/menu.component';
 import { CoursComponent } from './exo5/cours/cours.component';
 import { SharedModule } from '../shared/shared.module';
+import { Exo6ServiceComponent } from './exo6-service/exo6-service.component';
+import { BookServiceComponent } from './exo6-service/book-service/book-service.component';
 import { Exo6Component } from './exo6/exo6.component';
 import { BookComponent } from './exo6/book/book.component';
 // import { FormsModule } from '@angular/forms';
@@ -25,6 +27,8 @@ import { BookComponent } from './exo6/book/book.component';
     SpoilComponent,
     MenuComponent,
     CoursComponent,
+    Exo6ServiceComponent,
+    BookServiceComponent,
     Exo6Component,
     BookComponent
   ],

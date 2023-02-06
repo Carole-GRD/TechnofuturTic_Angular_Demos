@@ -1,0 +1,25 @@
+.book-content {
+    border: 2px solid blue; 
+    margin: 5px; 
+    padding: 5px 10px;
+}
+.book-content li {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    list-style-type: none;
+}
+.book-content p {
+    margin: 0;
+}
+.book-content span.seperate {
+    margin: 0 10px;
+}
+.book-content span.blueText {
+    font-weight: bolder;
+    color: blue;
+}
+.book-content button {
+    width: 30px;
+    height: 30px;
+}

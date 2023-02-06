@@ -5,15 +5,13 @@ import { AppComponent } from './app.component';
 
 import { DemosModule } from './demos/demos.module';
 import { ExosModule } from './exos/exos.module';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SharedModule } from './shared/shared.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavBarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
