@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { Demo6Component } from './demo6/demo6.component';
 import { EnfantComponent } from './demo6/enfant/enfant.component';
+import { Demo7Component } from './demo7/demo7.component';
+import { LoginService } from './services/login.service';
 
 
 @NgModule({
@@ -24,13 +26,19 @@ import { EnfantComponent } from './demo6/enfant/enfant.component';
     Demo5Component,
     ToTemperaturePipe,
     Demo6Component,
-    EnfantComponent
+    EnfantComponent,
+    Demo7Component
   ],
   imports: [
     CommonModule,
     DemosRoutingModule,
     FormsModule,
     SharedModule
+  ],
+  providers: [
+    // Injection au niveau du module "Demos"
+    LoginService      
+    // -> à ajouter pour utiliser ce service dans tout le module "Demos"
   ]
 })
 export class DemosModule { }
