@@ -39,6 +39,7 @@ import { LoginService } from './services/login.service';
     // Injection au niveau du module "Demos"
     LoginService      
     // -> à ajouter pour utiliser ce service dans tout le module "Demos"
+    // + voir fichier Demos -> services -> login.service.ts
   ]
 })
 export class DemosModule { }

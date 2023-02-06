@@ -1,19 +1,21 @@
 
-<div style="border: 2px solid red; margin: 5px; padding: 1%;">
+<div style="border: 2px solid grey; margin: 5px; padding: 1%;">
     <h2>Book List</h2>
 
-    <input type="text" [(ngModel)]="newBook">
-    <button (click)="addBook(newBook)">Add Book</button>
-
-    <div *ngIf="books.length === 0">
-        <p>Add books to your list</p>
+    <div>
+        <label for="book-input">Book Name : </label>
+        <input id="book-input" type="text" [(ngModel)]="bookName">
+        <button (click)="addBook()">Add Book</button>
+        <p *ngIf="listService.errorMessage" style="color: red;">
+            {{ listService.errorMessage }}
+        </p>
     </div>
 
-    <app-book
-        *ngFor="let book of books"
-        [idBookChildren]="idBook"
-        [bookChildren]="book"
-        (sayBookToDelete)="receiveBookToDelete($event)"
-     />
+
+    <div *ngIf="listService.books.length === 0">
+        <p style="color: blue;">Add books to your list</p>
+    </div>
+
+     <app-book />
     
 </div>

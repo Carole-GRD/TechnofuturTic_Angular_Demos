@@ -1,5 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Book } from '../exo6.component';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ListService } from '../../services/list.service';
+
+
+
 
 
 
@@ -8,29 +11,22 @@ import { Book } from '../exo6.component';
   templateUrl: './book.component.html',
   styleUrls: ['./book.component.scss']
 })
-export class BookComponent {
+export class BookComponent implements OnInit{
 
-  // "!" permet de ne pas devoir initialiser la variable
-  // on dit à Typescript de nous faire confiance, qu'il y aura bien des données dedans
+  idBook!: number;
+  bookName: string = '';
 
+  constructor(
+    public listService: ListService
+  ){}
 
-  // @Input() idBookChildren: number = 0;
-  @Input() idBookChildren!: number;
+  ngOnInit() {
+    this.bookName = this.listService.bookName;
+    this.idBook = this.listService.idBook;
+  }
 
-
-  // @Input() bookChildren: Book = { title: "Titre du livre" };
-  // @Input() bookChildren: Book = { id: 0, title: "Titre du livre" };
-  @Input() bookChildren!: Book;
-
-
-  // Faire réagir le parent (exo6) 
-  // en fonction de ce qu’il se passe dans l’enfant (book)
-  // via des "EventEmitter"
-  @Output() sayBookToDelete: EventEmitter<Book> = new EventEmitter<Book>();
-  // -> l'EventEmitter DOIT être initialisé !
-
-  sendBookToDelete(bookChildren: Book) {
-    this.sayBookToDelete.emit(bookChildren);
+  deleteBook(eventId: number) {
+    this.listService.deleteOneBook(eventId);
   }
   
 }

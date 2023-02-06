@@ -1,14 +1,8 @@
 
-<ul class="book-content">
 
-        <li>
-            <p><span>ID : </span>
-                <span class="blueText">{{ bookChildren.id }} </span>
-                <span class="seperate">||</span> 
-                <span>Name : </span>
-                <span class="blueText">{{ bookChildren.title }}</span>
-            </p>
-            <button (click)="sendBookToDelete(bookChildren)">X</button>
-        </li>
-
+<ul>
+    <li *ngFor="let book of listService.books">
+        ID : {{book.id}}  || Name : {{book.title}} || 
+        <button (click)="deleteBook(book.id)">X</button>
+    </li>
 </ul>
