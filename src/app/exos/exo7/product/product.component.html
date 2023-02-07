@@ -4,6 +4,10 @@
     - <span [ngClass]="{ 'isPromo': product.promo }">
         {{ product.pricePromo | currency: 'EUR' }}
       </span> 
-      - {{ product.price | currency: 'EUR' }}
+    - {{ product.price | currency: 'EUR' }} 
+    <button (click)="decrProduct()">-</button>
+    <button (click)="incrProduct()">+</button>
+    <button (click)="deleteProduct()">Delete</button> 
 </li>
+
 

@@ -4,4 +4,6 @@ export type Shopping = {
     pricePromo: number;
     price: number;
     promo: boolean;
+    pricePromoUnite: number;
+    priceUnite: number;
 }

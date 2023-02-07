@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ShoppingService } from '../../services/shopping.service';
 import { Shopping } from '../types/shopping';
 
@@ -7,14 +7,41 @@ import { Shopping } from '../types/shopping';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
 
   @Input() product!: Shopping;
-
+  @Input() shopping!: Shopping[];
+  @Input() total!: number;
+  
 
   constructor(
     private _shoppingService: ShoppingService
   ){}
 
+  ngOnInit(): void {
+    this.shopping = this._shoppingService.getAll();
+    this.total = this._shoppingService.total;
+  }
 
+  
+
+  deleteProduct() {
+    this._shoppingService.deleteProduct(this.product, this.product.pricePromo, this.total);
+   
+
+    this.total = this._shoppingService.total;
+    this.shopping = this._shoppingService.getAll();
+   
+  }
+
+  incrProduct() {
+    this._shoppingService.incrProduct(this.product, this.product.pricePromo, this.total);
+
+  }
+
+  decrProduct() {
+    this._shoppingService.decrProduct(this.product, this.product.pricePromoUnite, this.total);
+
+  }
+  
 }

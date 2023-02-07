@@ -26,7 +26,7 @@
             *ngFor="let product of shopping"
             [product]="product" />
     </ul>
-    <p>Total : {{ total | currency: 'EUR' }}</p>
+    <p>Total : {{ calculTotal() | currency: 'EUR' }}</p>
 </section>
 
 
