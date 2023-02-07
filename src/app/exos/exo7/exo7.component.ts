@@ -16,23 +16,19 @@ export class Exo7Component implements OnInit {
 
   shopping: Shopping[] = [];
 
-  // Injection des services
   constructor(
     private _shoppingService: ShoppingService
   ){}
 
-  // @Input() total!: number;
-
-  // Récupération des produits depuis mon service
   ngOnInit(): void {
     this.shopping = this._shoppingService.getAll();
   }
 
-  
+
   total: number = 2.65;
   addProduct() {
     this._shoppingService.addProduct(this.productName, this.productPrice, this.productPromo);
-    // this.resetTotal();
+
     this.total = this.shopping.reduce((accumulateur, currentProduct) => {
       return accumulateur += currentProduct.pricePromo;
     }, 0)

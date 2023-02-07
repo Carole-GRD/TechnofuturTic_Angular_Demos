@@ -7,8 +7,21 @@ import { Shopping } from '../exo7/types/shopping';
 export class ShoppingService {
 
   private _shopping: Shopping[] = [
-    { name: 'Pomme', quantity: 1, pricePromo: 1.30, price: 1.30, promo: false, pricePromoUnite: 1.30, priceUnite: 1.30 },
-    { name: 'Poire', quantity: 1, pricePromo: 1.35,  price: 1.50, promo: true, pricePromoUnite: 1.35, priceUnite: 1.50 },
+    { name: 'Pomme', 
+      quantity: 1, 
+      pricePromo: 1.30, 
+      price: 1.30, 
+      promo: false, 
+      pricePromoUnite: 1.30, 
+      priceUnite: 1.30 
+    },
+    { name: 'Poire', 
+      quantity: 1, 
+      pricePromo: 1.35,  
+      price: 1.50, 
+      promo: true, 
+      pricePromoUnite: 1.35, 
+      priceUnite: 1.50 },
   ];
 
   constructor() { }
@@ -47,19 +60,14 @@ export class ShoppingService {
       return product.name === productToDelete.name;
     })
     this._shopping.splice(indexProduct, 1);
-
-    // this.total = total - pricePromoUnite;
-    // this.totalPrice();
     
   }
 
-  // pricePromoUnite!: number;
+
   incrProduct(productToIncr: Shopping, pricePromoUnite: number, total: number) {
     productToIncr.quantity += 1;
     productToIncr.pricePromo = productToIncr.pricePromoUnite * productToIncr.quantity;
     productToIncr.price = productToIncr.priceUnite * productToIncr.quantity;
-    
-
   }
 
   decrProduct(productToDecr: Shopping, pricePromoUnite: number, total: number) {
@@ -73,14 +81,5 @@ export class ShoppingService {
       this.total = total - pricePromoUnite;
     }
   }
-
-  // totalPrice() {
-  //   this.total = this._shopping.reduce((accumulateur, currentProduct) => {
-  //     return accumulateur += currentProduct.pricePromo;
-  //   }, 0)
-  //   return this.total;
-  // }
-
-
 
 }

@@ -23,15 +23,8 @@ export class ProductComponent implements OnInit{
     this.total = this._shoppingService.total;
   }
 
-  
-
   deleteProduct() {
     this._shoppingService.deleteProduct(this.product, this.product.pricePromo, this.total);
-   
-
-    this.total = this._shoppingService.total;
-    this.shopping = this._shoppingService.getAll();
-   
   }
 
   incrProduct() {
@@ -41,7 +34,6 @@ export class ProductComponent implements OnInit{
 
   decrProduct() {
     this._shoppingService.decrProduct(this.product, this.product.pricePromoUnite, this.total);
-
   }
   
 }
