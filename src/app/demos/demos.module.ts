@@ -35,7 +35,7 @@ import { Demo8Component } from './demo8/demo8.component';
     CommonModule,
     DemosRoutingModule,
     FormsModule,
-    ReactiveFormsModule,     // à jouter pour les formulaire
+    ReactiveFormsModule,     // à jouter pour les formulaires !!!
     SharedModule
   ],
   providers: [
