@@ -17,10 +17,10 @@ export class ShoppingService {
     },
     { name: 'Poire', 
       quantity: 1, 
-      pricePromo: 1.35,  
+      pricePromo: 1.50,  
       price: 1.50, 
       promo: true, 
-      pricePromoUnite: 1.35, 
+      pricePromoUnite: 1.50, 
       priceUnite: 1.50 },
   ];
 
@@ -66,7 +66,6 @@ export class ShoppingService {
 
   incrProduct(productToIncr: Shopping, pricePromoUnite: number, total: number) {
     productToIncr.quantity += 1;
-    productToIncr.pricePromo = productToIncr.pricePromoUnite * productToIncr.quantity;
     productToIncr.price = productToIncr.priceUnite * productToIncr.quantity;
   }
 
@@ -76,9 +75,7 @@ export class ShoppingService {
       this.deleteProduct(productToDecr, productToDecr.pricePromo, this.total);
     }
     else {
-      productToDecr.pricePromo = productToDecr.pricePromoUnite * productToDecr.quantity;
       productToDecr.price = productToDecr.priceUnite * productToDecr.quantity;
-      this.total = total - pricePromoUnite;
     }
   }
 

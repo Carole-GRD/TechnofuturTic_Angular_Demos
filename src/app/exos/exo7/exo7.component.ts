@@ -36,7 +36,7 @@ export class Exo7Component implements OnInit {
   
   calculTotal() {
     this.total = this.shopping.reduce((accumulateur, currentProduct) => {
-      return accumulateur += currentProduct.pricePromo;
+      return accumulateur += (currentProduct.pricePromo * currentProduct.quantity);
     }, 0)
     return this.total;
   }
