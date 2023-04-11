@@ -5,7 +5,9 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 
-// @Injectable()
+
+// @Injectable()       ->     vider la parenthèse
+//    -> 
 // providers: [ LoginService ]
 // à ajouter dans "demos.module.ts" pour y avoir accès dans tout ce module "Demos"
 

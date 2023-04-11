@@ -34,15 +34,17 @@ import { Demo8Component } from './demo8/demo8.component';
   imports: [
     CommonModule,
     DemosRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,     // à jouter pour les formulaires !!!
+    FormsModule,             // pour le "formControl" ???  
+    ReactiveFormsModule,     // pour le "formGroup" !!!  
     SharedModule
   ],
-  providers: [
-    // Injection au niveau du module "Demos"
-    LoginService      
-    // -> à ajouter pour utiliser ce service dans tout le module "Demos"
-    // + voir fichier Demos -> services -> login.service.ts
-  ]
+  // Injection au niveau du module "Demos"
+  // -------------------------------------
+  // providers: [
+  //   LoginService      
+  // ]
+  // -------------------------------------
+  // -> à ajouter pour utiliser ce service dans tout le module "Demos"
+  // + voir fichier Demos -> services -> login.service.ts
 })
 export class DemosModule { }

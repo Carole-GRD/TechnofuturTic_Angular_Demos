@@ -59,41 +59,6 @@ export class Demo8Component {
   }
 
 
-  // ///////////////////////////////////////////////////////////////
-
-  // Form Builder (_fb)
-  // constructor(
-  //   private _fb: FormBuilder
-  // ){
-  //   this.artistProfile = this._fb.group({
-  //     name: ['', [Validators.required]],
-  //     genres: this._fb.array([
-  //       this._fb.control('', Validators.required)
-  //     ])
-  //   })
-  // }
-
-  // get genres(){
-  //   return this.artistProfile.get('genres') as FormArray;
-  // }
-
-  // getFormArray(myForm: FormGroup, nameFormArray: string) {
-  //   return myForm.get(nameFormArray) as FormArray;
-  // }
-
-  // addGenre() {
-  //   this.genre.push(this._fb.control('', Validators.required));
-  // }
-  // // addGenre() {
-  // //   this.genres.push(this._fb.control('', Validators.required));
-  // // }
-
-
-  // ///////////////////////////////////////////////////////////////
-
-
-
-
   hasErrorAndTouched(myForm: FormGroup, inputName: string, validator: string) {
     // return subscriptionForm.get('firstName')?.hasError('required') 
     //   && (subscriptionForm.get('firstName')?.touched || subscriptionForm.get('firstName')?.dirty)
